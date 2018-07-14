@@ -1,5 +1,5 @@
 # build environment
-FROM keymetrics/pm2:latest
+FROM keymetrics/pm2:latest-jessie
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
