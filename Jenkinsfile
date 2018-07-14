@@ -15,7 +15,7 @@ pipeline {
 
                     echo 'Build Docker...'
                     sh '''
-                    ssh -t -i "$KEY" "$USERNAME"@"$IP" -p 22 "cd /$USERNAME/jsonplaceholder.rizalibnu.com && sh start-dev.sh"
+                    ssh -t -i "$KEY" "$USERNAME"@"$IP" -p 22 "cd /$USERNAME/jsonplaceholder.rizalibnu.com && sh start.sh"
                     '''
                 }
             }
