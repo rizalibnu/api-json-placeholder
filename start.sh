@@ -3,7 +3,7 @@ imageName=rizalibnu/jsonplaceholder
 containerName=jsonplaceholder
 
 echo Building image...
-time docker build -t $imageName -f Dockerfile  .
+docker build -t $imageName -f Dockerfile  .
 
 echo Delete old container...
 docker rm -f $containerName
