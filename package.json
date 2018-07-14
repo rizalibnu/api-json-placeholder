@@ -1,0 +1,17 @@
+{
+  "name": "api-json-placeholder",
+  "version": "1.0.0",
+  "description": "mock api database",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "json-server, node, REST API"
+  ],
+  "author": "Rizal Ibnu",
+  "dependencies": {
+    "json-server": "^0.12.0",
+    "require-uncached": "^1.0.3"
+  }
+}

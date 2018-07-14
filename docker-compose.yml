@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    image: rizalibnu/jsonplaceholder
+    container_name: jsonplaceholder
+    environment:
+       VIRTUAL_HOST: jsonplaceholder.rizalibnu.com
+       LETSENCRYPT_HOST: jsonplaceholder.rizalibnu.com
+       LETSENCRYPT_EMAIL: hello@rizalibnu.com
+    restart: always
+    expose:
+       - 80
+
+networks:
+  default:
+    external:
+      name: webproxy
