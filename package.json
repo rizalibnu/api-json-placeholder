@@ -10,6 +10,7 @@
     "json-server, node, REST API"
   ],
   "author": "Rizal Ibnu",
+  "license": "MIT",
   "dependencies": {
     "json-server": "^0.12.0",
     "require-uncached": "^1.0.3"
