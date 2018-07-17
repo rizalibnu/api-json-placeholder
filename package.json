@@ -4,7 +4,8 @@
   "description": "mock api database",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "prod": "pm2 start server.js --no-daemon --instances=1"
   },
   "keywords": [
     "json-server, node, REST API"
@@ -13,6 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "json-server": "^0.12.0",
-    "require-uncached": "^1.0.3"
+    "require-uncached": "^1.0.3",
+    "pm2": "^2.10.3"
   }
 }

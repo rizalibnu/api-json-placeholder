@@ -1,10 +1,7 @@
 # build environment
-FROM keymetrics/pm2:latest-jessie
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY package.json /usr/src/app/package.json
+FROM node:10
+EXPOSE 3000
+COPY package.json package.json
 RUN yarn
-COPY . /usr/src/app
-RUN pm2 start server.js
-EXPOSE 80
+COPY . .
+CMD [ "yarn", "prod" ]

@@ -9,8 +9,8 @@ services:
        LETSENCRYPT_HOST: jsonplaceholder.rizalibnu.com
        LETSENCRYPT_EMAIL: hello@rizalibnu.com
     restart: always
-    expose:
-       - 80
+    ports:
+       - "4100:3000"
 
 networks:
   default:

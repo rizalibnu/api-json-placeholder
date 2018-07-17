@@ -3,7 +3,6 @@ const uncached = require('require-uncached');
 const server = jsonServer.create();
 const router = jsonServer.router('data.json');
 const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 4000;
 
 server.get('/refresh', (req, res) => {
   router.db.assign(uncached('./data.json')).write();
@@ -27,4 +26,4 @@ server.use((req, res, next) => {
 // Use default router
 server.use(router);
 
-server.listen(port);
+server.listen(3000);
